@@ -1,0 +1,722 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #f0efef;
+  font-size: 26px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.logo {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+header {
+  background: #033048;
+  padding: 25px 0;
+  overflow: hidden;
+}
+header .logo {
+  color: #fff;
+  float: left;
+}
+
+header nav {
+  float: right;
+  margin-top: 15px;
+  text-align: right;
+
+}
+header nav ul li {
+  display: inline-block;
+  margin: 0 0 0 40px;
+  font-size: 24px;
+}
+header nav ul li a {
+  color: #f9e42e;
+}
+
+#hero {
+  height: 700px;
+  background: url(../images/header_bg.jpg) no-repeat top center #131e27;
+  padding-top: 32px;
+}
+
+#hero .logo {
+  color: #fff;
+}
+#hero h2 {
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  margin: 120px 0 90px;
+  font-weight: 600;
+}
+.button {
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 12px 0;
+  width: 280px;
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.yellow {
+  background: #f9e42e;
+  color: #033048;
+}
+.blue {
+  background: #033048;
+  color: #fff;
+  font-size: 24px;
+}
+#benefits {
+  padding: 100px 0 80px;
+}
+h3 {
+  color: #033048;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+#benefits p, #benefits ul {
+  width: 600px;
+}
+#benefits ul {
+  list-style: disc;
+  margin: 30px 0 0 80px;
+}
+#testimonial {
+  background: url(../images/testimonial_bg.jpg) no-repeat top center #071324;
+  padding: 70px 0 70px;
+  color: #fff;
+}
+blockquote {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 580px;
+  margin: 0 auto;
+}
+blockquote span {
+  font-weight: 600;
+  display: block;
+  font-style: normal;
+}
+#main {
+  margin-top: 80px;
+}
+/************************************/
+/* CSS for blog starts here */
+#posts {
+  width: 700px;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+#sidebar {
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+}
+.post {
+  border-bottom: 1px solid #043049;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.post h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.post h2 a {
+  color: #043049;
+}
+
+.post img {
+  margin-bottom: 30px;
+}
+.post p {
+  font-size: 24px;
+  line-height: 1.333;
+  color: #606161;
+}
+.post p:first-of-type:first-letter {
+  float: left;
+  font-size: 80px;
+  line-height: 65px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-weight: 600;
+}
+.readmore {
+  text-align: right;
+  margin-top: 30px;
+}
+.readmore a {
+  color: #043049;
+  font-weight: 600;
+}
+/* CSS for buttons */
+.button {
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 12px 0;
+  width: 280px;
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.yellow {
+  background: #f9e42e;
+  color: #033048;
+}
+.blue {
+  background: #033048;
+  color: #fff;
+  font-size: 24px;
+}
+/* end CSS for buttons */
+
+/* continue CSS for blog.html */
+#sidebar h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #043049;
+}
+#sidebar ul {
+  margin-bottom: 40px;
+}
+#sidebar ul li a {
+  color: #043049;
+  font-size: 24px;
+}
+#sidebar p {
+  font-size: 22px;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+#sidebar p a {
+  color: #043049;
+  font-weight: 600;
+}
+#sidebar img {
+  width: 100%;
+}
+/* end of CSS for blog.html */
+
+#bottom-cta {
+  background: #f9e42e;
+  padding: 30px;
+  text-align: center;
+}
+
+footer {
+  background: #121212;
+  padding: 65px 0 45px;
+  text-align: center;
+}
+footer .logo {
+  color: #f9e42e;
+  margin-bottom: 68px;
+}
+footer ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 26px 75px;
+}
+footer p {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  /* @media for index.html */
+  .container {
+    width: 348px;
+  }
+  .logo {
+    font-size: 36px;
+    text-align: center;
+  }
+  header nav {
+    float: none;
+    text-align: center;
+  }
+  header .logo {
+    float: none;
+    text-align: center;
+  }
+  header nav ul li {
+    font-size: 18px;
+    margin: 0 7px 0 7px;
+  }
+  header nav ul li:first-child {
+    margin-left: 0;
+  }
+  #hero {
+    height: 400px;
+    background-position: left;
+  }
+  #hero h2 {
+    font-size: 20px;
+    margin: 75px 0 90px;
+  }
+  .button {
+    padding: 10px 0;
+    width: 160px;
+    font-size: 18px;
+  }
+  #benefits {
+    width: 350px;
+    padding: 20px 10px 30px 10px;
+    margin-right: 0;
+  }
+  h3 {
+    color: #033048;
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  #benefits p, #benefits ul {
+    width: 80%;
+    margin-right: 0;
+    font-size: 13px;
+    width: auto;
+    padding-right: 10px;
+  }
+  #benefits ul {
+    width: 78%;
+    margin-right: -15px;
+    list-style: disc;
+    margin-left: 40px;
+  }
+  #testimonial .container {
+    width: 350px;
+  }
+  blockquote {
+    font-size: 14px;
+    width: 300px;
+  }
+  #bottom-cta {
+    padding: 20px;
+  }
+  .blue {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  footer {
+    padding: 40px 0 20px;
+  }
+  footer .logo {
+    margin-bottom: 30px;
+  }
+  footer ul li {
+    margin: 0 10px 35px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+  footer a img {
+    width: auto;
+    height: 18px;
+  }
+  /* @media for blog.html */
+  #main {
+    margin-top: 20px;
+  }
+  #posts {
+    width: 100%;
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 10px;
+  }
+  #sidebar {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .post {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .post h2 {
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .post img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .post p {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+  .post p:first-of-type:first-letter {
+    float: left;
+    font-size: 35px;
+    line-height: 25px;
+    padding-left: 0px;
+  }
+  .readmore {
+    margin-top: 10px;
+  }
+  #sidebar h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  #sidebar ul {
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  #sidebar ul li a {
+    text-align: center;
+    font-size: 16px;
+  }
+  #sidebar p {
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  #sidebar p a {
+    line-height: 2.5;
+    font-size: 14px;
+  }
+  #sidebar img {
+    width: auto;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* @media for index.html */
+  .container {
+    width: 460px;
+  }
+  .logo {
+    font-size: 40px;
+  }
+  header nav {
+    float: none;
+    text-align: center;
+  }
+  header .logo {
+    float: none;
+    text-align: center;
+  }
+  header nav ul li {
+    margin: 0 10px 0 10px;
+    font-size: 22px;
+  }
+  #hero {
+    height: 450px;
+    background-position: left;
+  }
+  #hero h2 {
+    font-size: 26px;
+    margin: 100px 0 90px;
+    text-align: center;
+  }
+  .button {
+    padding: 13px 0;
+    width: 180px;
+    font-size: 18px;
+  }
+  #benefits {
+    width: 460px;
+    padding: 40px 10px 40px 30px;
+  }
+  h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  #benefits p, #benefits ul {
+    width: auto;
+    font-size: 16px;
+    margin-right: -10px;
+    padding-right: 10px;
+  }
+  blockquote {
+    font-size: 16px;
+    width: 450px;
+  }
+  #bottom-cta {
+    padding: 20px;
+  }
+  .blue {
+    font-size: 16px;
+  }
+  footer {
+    padding: 45px 0 25px;
+  }
+  footer .logo {
+    margin-bottom: 38px;
+  }
+  footer ul li {
+    margin: 0 14px 40px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  footer a img {
+    width: auto;
+    height: 22px;
+  }
+
+/* @media for blog.html */
+  #main {
+    margin-top: 45px;
+  }
+  #posts {
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #sidebar {
+    width: 100%;
+  }
+  .post {
+    border-bottom: 1px solid #043049;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+  .post h2 {
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .post h2 a {
+    color: #043049;
+  }
+
+  .post img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .post p {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .post p:first-of-type:first-letter {
+    font-size: 45px;
+    line-height: 30px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-left: 0;
+  }
+  #sidebar h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  #sidebar ul {
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  #sidebar ul li a {
+    font-size: 16px;
+  }
+  #sidebar p {
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  #sidebar img {
+    width: auto;
+    height: 150px;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  /* @media for index.html */
+  .container {
+    width: 720px;
+  }
+  #hero {
+    height: 600px;
+  }
+  #hero h2 {
+    font-size: 42px;
+  }
+  .button {
+    width: 240px;
+  }
+  #benefits {
+    padding: 70px 0 60px;
+  }
+  #benefits p, #benefits ul {
+    font-size: 24px;
+  }
+  blockquote {
+    font-size: 28px;
+  }
+  #bottom-cta {
+    padding: 28px;
+  }
+  footer {
+    padding: 55px 0 35px;
+  }
+  /* @media for blog.html */
+  #main {
+    margin-top: 60px;
+  }
+  #posts {
+    width: 100%;
+  }
+  #sidebar {
+    width: 100%;
+  }
+  .post h2 {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  .post p {
+    font-size: 20px;
+    line-height: 1.333;
+    color: #606161;
+  }
+  .post p:first-of-type:first-letter {
+    float: left;
+    font-size: 58px;
+    line-height: 45px;
+    padding-left: 1px;
+  }
+  #sidebar h3 {
+    font-size: 28px;
+  }
+  #sidebar ul li a {
+    color: #043049;
+    font-size: 20px;
+  }
+  #sidebar p {
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  #sidebar p a {
+    line-height: 2.5;
+  }
+  #sidebar img {
+    width: auto;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  /* @media for index.html */
+  .container {
+    width: 880px;
+  }
+  /* @media for blog.html */
+  #posts {
+    width: 75%;
+    margin-right: 30px;
+  }
+  #sidebar {
+    width: 20%;
+  }
+  .post p:first-of-type:first-letter {
+    font-size: 110px;
+    line-height: 67px;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+  .post img {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* @media for index.html */
+  .container {
+    min-width: 1140px;
+  }
+  #hero, #testimonial {
+    background-size: cover;
+  }
+
+  /* @media for blog.html */
+  #posts {
+    width: 80%;
+    margin-right: 40px;
+  }
+  #sidebar {
+    width: 16%;
+  }
+  .post p:first-of-type:first-letter {
+    font-size: 110px;
+    line-height: 67px;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+  .post img {
+    width: 98%;
+  }
+}
